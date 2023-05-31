@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import store from '@/store/index.js'
 
+import { updateState } from '@/api/user.js'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -111,12 +113,14 @@ router.beforeEach((to, from, next) => {
   }
 })
 
-router.afterEach((to, from) => {
+router.afterEach(async (to, from) => {
   // 如果(已登录用户)跳转到了 非白名单页面
   if (!whiteList.includes(to.path)) {
     // 如果用户状态定时器timerID为undefined (即：用户刷新了页面，注意：路由之间的切换不会导致timerID为undefined)
     if (Vue.prototype.$timerID === undefined) {
-      // 重开一个定时器 续上之前本地剩下的秒数
+      // 一个已登录的用户刷新了页面，故其一定在线，故直接更新在线状态
+      await updateState()
+      // 重开一个定时器
       // Vue 就是任何组件里面的 this
       Vue.prototype.$initState()
     }

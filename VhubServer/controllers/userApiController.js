@@ -379,7 +379,7 @@ exports.user_login = async function (req, res, next) {
     ------------------------------
 
 
-    用户 ${username_user} 的121秒时间到了！   user_login
+    用户 ${username_user} 的65秒时间到了！   user_login
 
 
     ------------------------------
@@ -395,7 +395,7 @@ exports.user_login = async function (req, res, next) {
 
     // 清除用户的在线定时器
     clearTimeout(timer[username_user])
-  }, 121000)
+  }, 65000)
 
   // console.log('刚开始时 timer大对象:', timer);
 }
@@ -541,7 +541,7 @@ exports.user_state_update = async function (req, res, next) {
     ------------------------------
 
 
-    用户 ${username} 的121秒时间到了！   user_state_update
+    用户 ${username} 的65秒时间到了！   user_state_update
 
 
     ------------------------------
@@ -557,7 +557,7 @@ exports.user_state_update = async function (req, res, next) {
 
     // 清除用户的在线定时器
     clearTimeout(timer[username])
-  }, 121000)
+  }, 65000)
 
   res.end()
 

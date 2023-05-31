@@ -5,13 +5,19 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-  },
-  getters: {
+    userInfo: JSON.parse(localStorage.getItem('userInfo')) || {}
   },
   mutations: {
-  },
-  actions: {
-  },
-  modules: {
+    setUserInfo (state, obj) {
+      if (obj.username) {
+        state.userInfo = obj
+        localStorage.setItem('userInfo', JSON.stringify(obj))
+      }
+    },
+    delUserInfo (state) {
+      state.userInfo = {}
+      localStorage.removeItem('userInfo')
+      localStorage.removeItem('userTimer')
+    }
   }
 })

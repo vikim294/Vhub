@@ -1,0 +1,214 @@
+nav {
+  padding: 45px 0 20px 0;
+}
+nav .wrapper {
+  display: flex;
+  justify-content: center;
+}
+nav .wrapper .bin {
+  padding: 10px 60px;
+  background-color: #05232f61;
+  border-radius: 10px;
+  transition: all 1s;
+}
+nav .wrapper .bin a {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  margin: 0 5px;
+  background-color: purple;
+  transition: transform 0.5s;
+  transform-origin: center bottom;
+  border-radius: 4px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+nav .wrapper .bin a:hover {
+  transform: scale(1.3);
+  margin: 0 15px;
+}
+nav .wrapper .bin a .bi {
+  font-size: 40px;
+  color: #fff;
+}
+nav .wrapper .bin a.home {
+  background-color: #fff;
+}
+nav .wrapper .bin a.home .bi {
+  color: #000;
+}
+nav .wrapper .bin a.p-center {
+  background-color: green;
+}
+nav .wrapper .bin a.p-center:hover {
+  background-color: #0d950d;
+}
+nav .wrapper .bin a.p-factory {
+  background-color: #f94040;
+}
+nav .wrapper .bin a.p-factory:hover {
+  background-color: #fe5959;
+}
+nav .wrapper .bin a.p-message {
+  background-color: pink;
+}
+nav .wrapper .bin a.p-message:hover {
+  background-color: #fdd0d7;
+}
+nav .wrapper .bin a.p-collect {
+  background-color: gold;
+}
+nav .wrapper .bin a.p-collect:hover {
+  background-color: #ffde22;
+}
+nav .wrapper .bin a.p-social {
+  background-color: skyblue;
+}
+nav .wrapper .bin a.p-social:hover {
+  background-color: #97d9f3;
+}
+main {
+  margin-top: 5px;
+}
+main .wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 924px;
+  height: 750px;
+  margin: 0 auto;
+  background-color: #fdfdfd;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+main .wrapper .topBar {
+  flex: 0 0 auto;
+  height: 70px;
+  line-height: 70px;
+  background-color: #fff;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+}
+main .wrapper .topBar .search {
+  position: relative;
+  padding-left: 10px;
+}
+main .wrapper .topBar .search .title {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  padding: 2px 6px;
+  line-height: 36px;
+  font-size: 18px;
+  color: #fff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+main .wrapper .topBar .search .title.subscriber {
+  background: #4de0aa;
+}
+main .wrapper .topBar .search .title.subscription {
+  background: pink;
+}
+main .wrapper .topBar .search input {
+  cursor: pointer;
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  padding: 0 10px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+  background-color: skyblue;
+  border-radius: 5px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.5s, width 0.5s, color 0.2s;
+}
+main .wrapper .topBar .search input::placeholder {
+  color: #fff;
+  font-weight: 700;
+}
+main .wrapper .topBar .search input:focus {
+  cursor: text;
+  width: 260px;
+  color: #000;
+  background-color: #fff;
+}
+main .wrapper .body {
+  height: 680px;
+  overflow-y: auto;
+}
+main .wrapper .body::-webkit-scrollbar {
+  width: 10px;
+}
+main .wrapper .body::-webkit-scrollbar-track {
+  background-color: #ffffff8f;
+}
+main .wrapper .body::-webkit-scrollbar-thumb {
+  background-color: #d36e80;
+}
+main .wrapper .body table {
+  width: 100%;
+  table-layout: fixed;
+  text-align: center;
+  border-collapse: collapse;
+}
+main .wrapper .body table thead tr {
+  border-bottom: 1px solid #ededed;
+}
+main .wrapper .body table thead tr th {
+  padding: 0;
+  height: 75px;
+}
+main .wrapper .body table thead tr th:nth-child(1) {
+  width: 10%;
+}
+main .wrapper .body table thead tr th:nth-child(2) {
+  width: 20%;
+}
+main .wrapper .body table thead tr th:nth-child(3) {
+  width: 15%;
+}
+main .wrapper .body table thead tr th:nth-child(4) {
+  width: 20%;
+}
+main .wrapper .body table thead tr th:nth-child(5) {
+  width: 35%;
+}
+main .wrapper .body table tbody tr {
+  transition: all 0.2s;
+  border-bottom: 1px solid #ededed;
+}
+main .wrapper .body table tbody tr:hover {
+  background-color: #f6f6f6;
+}
+main .wrapper .body table tbody tr:hover .op a {
+  color: #fff;
+  padding: 9px 10px;
+}
+main .wrapper .body table tbody tr:hover .op .goToFactory {
+  background-color: #b9b4f3;
+}
+main .wrapper .body table tbody tr:hover .op .unsubscribe {
+  background-color: #ea9595;
+}
+main .wrapper .body table tbody tr td {
+  padding: 0;
+  height: 60px;
+}
+main .wrapper .body table tbody tr td.op > a {
+  color: #000;
+  padding: 0px 10px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+main .wrapper .body table tbody tr td.op .goToFactory:hover {
+  background-color: #a9a3eb;
+}
+main .wrapper .body table tbody tr td.op .unsubscribe {
+  margin-left: 25px;
+}
+main .wrapper .body table tbody tr td.op .unsubscribe:hover {
+  background-color: #e28585;
+}

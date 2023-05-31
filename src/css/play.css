@@ -1,0 +1,638 @@
+main .wrapper {
+  width: 1680px;
+  height: 770px;
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 0px 3px 3px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  position: relative;
+  overflow-y: auto;
+}
+main .wrapper::-webkit-scrollbar {
+  width: 5px;
+}
+main .wrapper::-webkit-scrollbar-track {
+  background-color: #ffffff8f;
+}
+main .wrapper::-webkit-scrollbar-thumb {
+  background-color: #d36e80;
+}
+main .wrapper .mask {
+  position: fixed;
+  z-index: 1000;
+  width: 1680px;
+  height: 770px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+main .wrapper .mask .container-mask .edit-videoInfo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 4px;
+  width: 700px;
+  height: 460px;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .head {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 20px;
+  background-color: skyblue;
+  color: #fff;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .body {
+  height: 400px;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .body #form_edit > div {
+  display: flex;
+  margin-top: 30px;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .body #form_edit > div.ops {
+  margin: 0;
+  padding-right: 30px;
+  justify-content: end;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .body #form_edit > div.ops button {
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .body #form_edit > div.ops button[type='submit'] {
+  margin-left: 20px;
+  background-color: #69ccf3;
+  color: #fff;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .body #form_edit > div.ops button[type='submit']:hover {
+  background-color: skyblue;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .body #form_edit > div.ops button[type='button'] {
+  background-color: #eeeeee;
+  color: #000;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .body #form_edit > div.ops button[type='button']:hover {
+  background-color: #c4c4c4;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .body #form_edit > div.cover {
+  position: relative;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .body #form_edit > div.cover .box {
+  display: flex;
+  align-items: center;
+  margin: 0 30px 0 15px;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .body #form_edit > div.cover .box .uploadBtn {
+  background: skyblue;
+  padding: 10px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .body #form_edit > div.cover .box .uploadBtn:hover {
+  background: #a99fe9;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .body #form_edit > div.cover .box .uploadBtn .bi {
+  color: #fff;
+  font-size: 25px;
+  padding: 10px 15px;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .body #form_edit > div.cover .box .filename_cover {
+  font-size: 20px;
+  margin-left: 15px;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .body #form_edit > div.cover #cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  visibility: hidden;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .body #form_edit > div label {
+  width: 110px;
+  text-align: right;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .body #form_edit > div #title {
+  flex: 1;
+  height: 50px;
+  margin: 0 30px 0 15px;
+  padding: 0 10px;
+  background-color: #f6f6f6;
+  border-radius: 4px;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .body #form_edit > div #title:focus {
+  outline: 1px solid skyblue;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .body #form_edit > div #intro {
+  flex: 1;
+  margin: 0 30px 0 15px;
+  padding: 10px 10px;
+  height: 110px;
+  background-color: #f6f6f6;
+  resize: none;
+  border-radius: 4px;
+}
+main .wrapper .mask .container-mask .edit-videoInfo .body #form_edit > div #intro:focus {
+  outline: 1px solid skyblue;
+}
+main .wrapper .mask .container-mask .remark-detail {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 4px;
+  width: 1200px;
+  height: 700px;
+  overflow: hidden;
+}
+main .wrapper .mask .container-mask .remark-detail .head {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: relative;
+  background-color: skyblue;
+}
+main .wrapper .mask .container-mask .remark-detail .head .title {
+  font-size: 20px;
+  color: #fff;
+}
+main .wrapper .mask .container-mask .remark-detail .head .op {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  line-height: 1;
+}
+main .wrapper .mask .container-mask .remark-detail .head .op .bi-x-square-fill {
+  color: #ffffff;
+  font-size: 34px;
+  cursor: pointer;
+}
+main .wrapper .mask .container-mask .remark-detail .head .op .bi-x-square-fill:hover {
+  color: #fafafa;
+}
+main .wrapper .mask .container-mask .remark-detail .body {
+  flex: 1 1 0;
+  overflow-y: auto;
+}
+main .wrapper .mask .container-mask .remark-detail .body::-webkit-scrollbar {
+  width: 5px;
+}
+main .wrapper .mask .container-mask .remark-detail .body::-webkit-scrollbar-track {
+  background-color: #ffffff8f;
+}
+main .wrapper .mask .container-mask .remark-detail .body::-webkit-scrollbar-thumb {
+  background-color: #d36e80;
+}
+main .wrapper .mask .container-mask .remark-detail .body .container-remark .remark-item {
+  position: relative;
+  padding: 30px 20px 30px 50px;
+  display: flex;
+  transition: background-color 0.3s;
+}
+main .wrapper .mask .container-mask .remark-detail .body .container-remark .remark-item:hover {
+  background-color: #fcfcfc;
+}
+main .wrapper .mask .container-mask .remark-detail .body .container-remark .remark-item:nth-child(n+2) {
+  border-top: 1px solid #eee;
+}
+main .wrapper .mask .container-mask .remark-detail .body .container-remark .remark-item:hover .ops {
+  opacity: 1;
+}
+main .wrapper .mask .container-mask .remark-detail .body .container-remark .remark-item .userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5px;
+}
+main .wrapper .mask .container-mask .remark-detail .body .container-remark .remark-item .userInfo .avatar {
+  width: 80px;
+  height: 80px;
+}
+main .wrapper .mask .container-mask .remark-detail .body .container-remark .remark-item .userInfo .avatar img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+main .wrapper .mask .container-mask .remark-detail .body .container-remark .remark-item .userInfo .username {
+  margin-top: 5px;
+  font-weight: 700;
+}
+main .wrapper .mask .container-mask .remark-detail .body .container-remark .remark-item .remark {
+  margin-left: 20px;
+  display: flex;
+}
+main .wrapper .mask .container-mask .remark-detail .body .container-remark .remark-item .remark .sign-at {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ccc;
+  margin-right: 10px;
+}
+main .wrapper .mask .container-mask .remark-detail .body .container-remark .remark-item .remark .sign-at.t1Remark {
+  display: none;
+}
+main .wrapper .mask .container-mask .remark-detail .body .container-remark .remark-item .remark .content-remark {
+  flex: 1;
+}
+main .wrapper .mask .container-mask .remark-detail .body .container-remark .remark-item .post-time {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  font-size: 13px;
+  color: #999;
+}
+main .wrapper .mask .container-mask .remark-detail .body .container-remark .remark-item .ops {
+  opacity: 0;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  transition: opacity 0.3s;
+}
+main .wrapper .mask .container-mask .remark-detail .body .container-remark .remark-item .ops .reply {
+  cursor: pointer;
+  color: #15a4df;
+  font-size: 15px;
+}
+main .wrapper .mask .container-mask .remark-detail .body .container-remark .remark-item .ops .reply:hover {
+  color: skyblue;
+}
+main .wrapper .mask .container-mask .remark-detail .bottomBar {
+  position: relative;
+  width: 100%;
+  height: 0px;
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.1);
+  transition: height 1s, padding 1s;
+}
+main .wrapper .mask .container-mask .remark-detail .bottomBar.active {
+  height: 100px;
+  padding: 10px 20px;
+}
+main .wrapper .mask .container-mask .remark-detail .bottomBar #textarea_reply {
+  width: 100%;
+  height: 100%;
+  background-color: #ffeeee;
+  border-radius: 6px;
+  resize: none;
+  padding: 7px 0 0 74px;
+  font-size: 18px;
+  overflow-y: auto;
+}
+main .wrapper .mask .container-mask .remark-detail .bottomBar #textarea_reply::-webkit-scrollbar {
+  width: 5px;
+}
+main .wrapper .mask .container-mask .remark-detail .bottomBar #textarea_reply::-webkit-scrollbar-track {
+  background-color: #ffffff8f;
+}
+main .wrapper .mask .container-mask .remark-detail .bottomBar #textarea_reply::-webkit-scrollbar-thumb {
+  background-color: #d36e80;
+}
+main .wrapper .mask .container-mask .remark-detail .bottomBar #textarea_reply:hover,
+main .wrapper .mask .container-mask .remark-detail .bottomBar #textarea_reply:focus {
+  outline: 2px solid skyblue;
+}
+main .wrapper .mask .container-mask .remark-detail .bottomBar .sign-at {
+  position: absolute;
+  top: 16px;
+  left: 26px;
+  color: #bbb;
+  font-weight: 700;
+}
+main .wrapper .play-panel {
+  padding: 0px 20px;
+}
+main .wrapper .play-panel .videoTitle {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  padding: 5px 2px;
+  margin-top: 10px;
+  background: -webkit-linear-gradient(left, bisque, #ffc4c4, #c4d7ff);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+}
+main .wrapper .play-panel .videoInfo {
+  margin-top: 16px;
+  border-top: 1px solid #f4f4f4;
+}
+main .wrapper .play-panel .videoInfo .top {
+  height: 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .wrapper .play-panel .videoInfo .top .l {
+  color: #999;
+}
+main .wrapper .play-panel .videoInfo .top .l > span {
+  margin-right: 12px;
+}
+main .wrapper .play-panel .videoInfo .top .r .op {
+  padding: 4px 10px;
+  cursor: pointer;
+}
+main .wrapper .play-panel .videoInfo .top .r .op .bi {
+  margin-left: 12px;
+  font-size: 26px;
+  color: skyblue;
+  transition: all 0.1s;
+}
+main .wrapper .play-panel .videoInfo .top .r .op .bi.bi-pencil-square {
+  font-size: 25px;
+}
+main .wrapper .play-panel .videoInfo .top .r .op .bi.bi-pencil-square:hover {
+  color: green;
+}
+main .wrapper .play-panel .videoInfo .top .r .op .bi.bi-hand-thumbs-up:hover {
+  color: orange;
+}
+main .wrapper .play-panel .videoInfo .top .r .op .bi.bi-trash3:hover {
+  color: red;
+}
+main .wrapper .play-panel .videoInfo .des {
+  font-size: 18px;
+  background: #f4f4f4;
+  color: #000;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+main .wrapper .play-panel .videoBox {
+  width: 1200px;
+  height: 675px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+}
+main .wrapper .play-panel .videoBox video {
+  width: 100%;
+  vertical-align: middle;
+  border-radius: 3px;
+}
+main .wrapper .play-panel .videoRemark {
+  margin-top: 20px;
+  height: 1000px;
+}
+main .wrapper .play-panel .videoRemark .inputArea {
+  display: flex;
+  position: relative;
+}
+main .wrapper .play-panel .videoRemark .inputArea::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: pink;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+main .wrapper .play-panel .videoRemark .inputArea .avatar {
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+}
+main .wrapper .play-panel .videoRemark .inputArea .avatar img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+main .wrapper .play-panel .videoRemark .inputArea .textarea {
+  flex: 1;
+  margin-left: 20px;
+}
+main .wrapper .play-panel .videoRemark .inputArea .textarea #textarea_remark {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  font-size: 16px;
+  resize: none;
+  background-color: #fbfbfb;
+  border-radius: 4px;
+  overflow-y: auto;
+}
+main .wrapper .play-panel .videoRemark .inputArea .textarea #textarea_remark::-webkit-scrollbar {
+  width: 5px;
+}
+main .wrapper .play-panel .videoRemark .inputArea .textarea #textarea_remark::-webkit-scrollbar-track {
+  background-color: #ffffff8f;
+}
+main .wrapper .play-panel .videoRemark .inputArea .textarea #textarea_remark::-webkit-scrollbar-thumb {
+  background-color: #d36e80;
+}
+main .wrapper .play-panel .videoRemark .inputArea .textarea #textarea_remark:focus,
+main .wrapper .play-panel .videoRemark .inputArea .textarea #textarea_remark:hover {
+  outline: 1px solid skyblue;
+}
+main .wrapper .play-panel .videoRemark .remarkArea {
+  margin-top: 20px;
+  border-top: 1px solid #ededed;
+  padding-top: 20px;
+}
+main .wrapper .play-panel .videoRemark .remarkArea .remark-item {
+  position: relative;
+  padding: 30px 5px 30px 30px;
+  margin-bottom: 10px;
+  display: flex;
+  border-radius: 8px;
+  background: #fff;
+  transition: background-color 0.2s;
+}
+main .wrapper .play-panel .videoRemark .remarkArea .remark-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background-color: skyblue;
+  opacity: 0;
+}
+main .wrapper .play-panel .videoRemark .remarkArea .remark-item:hover {
+  background: #fbfbfb;
+}
+main .wrapper .play-panel .videoRemark .remarkArea .remark-item:hover::before {
+  opacity: 1;
+}
+main .wrapper .play-panel .videoRemark .remarkArea .remark-item:hover .ops {
+  visibility: visible;
+}
+main .wrapper .play-panel .videoRemark .remarkArea .remark-item:hover .tip {
+  display: none !important;
+}
+main .wrapper .play-panel .videoRemark .remarkArea .remark-item .userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5px;
+}
+main .wrapper .play-panel .videoRemark .remarkArea .remark-item .userInfo .avatar {
+  width: 80px;
+  height: 80px;
+}
+main .wrapper .play-panel .videoRemark .remarkArea .remark-item .userInfo .avatar img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+main .wrapper .play-panel .videoRemark .remarkArea .remark-item .userInfo .username {
+  margin-top: 5px;
+  font-weight: 700;
+}
+main .wrapper .play-panel .videoRemark .remarkArea .remark-item .remark {
+  margin-left: 20px;
+}
+main .wrapper .play-panel .videoRemark .remarkArea .remark-item .post-time {
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  font-size: 13px;
+  color: #999;
+}
+main .wrapper .play-panel .videoRemark .remarkArea .remark-item .ops {
+  visibility: hidden;
+  position: absolute;
+  bottom: 10px;
+  right: 9px;
+}
+main .wrapper .play-panel .videoRemark .remarkArea .remark-item .ops .check-detail {
+  cursor: pointer;
+  color: #15a4df;
+  font-size: 15px;
+}
+main .wrapper .play-panel .videoRemark .remarkArea .remark-item .ops .check-detail:hover {
+  color: skyblue;
+}
+main .wrapper .play-panel .videoRemark .remarkArea .remark-item .tip {
+  position: absolute;
+  bottom: 10px;
+  right: 9px;
+  cursor: pointer;
+  color: #15a4df;
+  font-size: 15px;
+}
+main .wrapper .side-panel {
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+}
+main .wrapper .side-panel .author-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 40px;
+  padding: 14px 0;
+  border-bottom: 1px solid #efefef;
+}
+main .wrapper .side-panel .author-box .l .avatar {
+  width: 100px;
+  height: 100px;
+}
+main .wrapper .side-panel .author-box .l .avatar img {
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+main .wrapper .side-panel .author-box .r {
+  margin-left: 30px;
+  text-align: center;
+}
+main .wrapper .side-panel .author-box .r .authorName {
+  font-size: 22px;
+}
+main .wrapper .side-panel .author-box .r .op {
+  margin-top: 10px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 40px;
+  border: 1px solid red;
+  background-color: #fff;
+  box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+main .wrapper .side-panel .recom-box {
+  width: 435px;
+  padding: 0 40px 40px;
+  background-color: #fafafa;
+}
+main .wrapper .side-panel .recom-box .head {
+  padding: 14px 0 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .wrapper .side-panel .recom-box .head .title {
+  font-size: 24px;
+}
+main .wrapper .side-panel .recom-box .head .op {
+  padding: 5px 6px;
+  border: 1px solid skyblue;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+main .wrapper .side-panel .recom-box .body {
+  display: flex;
+  flex-direction: column;
+}
+main .wrapper .side-panel .recom-box .body .v-item {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #000;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+main .wrapper .side-panel .recom-box .body .v-item:hover .t img {
+  transform: scale(1.05);
+}
+main .wrapper .side-panel .recom-box .body .v-item .t {
+  position: relative;
+  width: 355px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+}
+main .wrapper .side-panel .recom-box .body .v-item .t img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  transition: transform 1s;
+}
+main .wrapper .side-panel .recom-box .body .v-item .t .mask {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 12px;
+  background: -webkit-linear-gradient(bottom, #333, transparent);
+  color: #fff;
+  font-size: 14px;
+}
+main .wrapper .side-panel .recom-box .body .v-item .t .mask .visit {
+  float: left;
+}
+main .wrapper .side-panel .recom-box .body .v-item .t .mask .duration {
+  float: right;
+}
+main .wrapper .side-panel .recom-box .body .v-item .b {
+  padding: 0 2px 10px;
+}
+main .wrapper .side-panel .recom-box .body .v-item .b .title {
+  padding: 5px 0 6px 0px;
+}
+main .wrapper .side-panel .recom-box .msg {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 20px;
+  color: #999;
+}

@@ -1,0 +1,200 @@
+.topbar .wrapper {
+  width: 1680px;
+  margin: 0 auto;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+.topbar .wrapper .user {
+  display: flex;
+}
+.topbar .wrapper .user a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin-left: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+.topbar .wrapper .user a .bi {
+  font-size: 40px;
+  color: #fff;
+}
+.topbar .wrapper .user a.p-center {
+  background-color: green;
+}
+.topbar .wrapper .user a.p-center:hover {
+  background-color: #0d950d;
+}
+.topbar .wrapper .user a.p-factory {
+  background-color: #f94040;
+}
+.topbar .wrapper .user a.p-factory:hover {
+  background-color: #fe5959;
+}
+.topbar .wrapper .user a.p-message {
+  background-color: pink;
+}
+.topbar .wrapper .user a.p-message:hover {
+  background-color: #fdd0d7;
+}
+.topbar .wrapper .user a.p-collect {
+  background-color: gold;
+}
+.topbar .wrapper .user a.p-collect:hover {
+  background-color: #ffde22;
+}
+.topbar .wrapper .user a.p-social {
+  background-color: skyblue;
+}
+.topbar .wrapper .user a.p-social:hover {
+  background-color: #97d9f3;
+}
+main .wrapper {
+  width: 1680px;
+  height: 770px;
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 0px 3px 3px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+main .wrapper .articleEditing-panel {
+  width: 100%;
+  height: 100%;
+}
+main .wrapper .articleEditing-panel form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .wrapper .articleEditing-panel form .article-title {
+  height: 100px;
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+main .wrapper .articleEditing-panel form .article-title #aTitle {
+  width: 1000px;
+  height: 100%;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  color: #000;
+  outline: none;
+  background-color: #f7f4f4;
+  border: 2px dashed transparent;
+}
+main .wrapper .articleEditing-panel form .article-title #aTitle:focus {
+  border: 2px dashed skyblue;
+}
+main .wrapper .articleEditing-panel form .article-content {
+  width: 100%;
+  height: 100%;
+  margin-top: 24px;
+  text-align: center;
+}
+main .wrapper .articleEditing-panel form .article-content #aContent {
+  width: 1330px;
+  height: 100%;
+  padding: 20px;
+  font-size: 20px;
+  outline: none;
+  resize: none;
+  background-color: #f7f4f4;
+  border: 2px dashed transparent;
+  overflow-y: auto;
+}
+main .wrapper .articleEditing-panel form .article-content #aContent:focus {
+  border: 2px dashed skyblue;
+}
+main .wrapper .articleEditing-panel form .article-content #aContent::-webkit-scrollbar {
+  width: 5px;
+}
+main .wrapper .articleEditing-panel form .article-content #aContent::-webkit-scrollbar-track {
+  background-color: #ffffff8f;
+}
+main .wrapper .articleEditing-panel form .article-content #aContent::-webkit-scrollbar-thumb {
+  background-color: #d36e80;
+}
+main .wrapper .articleEditing-panel form .article-op {
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+}
+main .wrapper .articleEditing-panel form .article-op button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+main .wrapper .articleEditing-panel form .article-op #reset {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+main .wrapper .articleEditing-panel form .article-op #reset:hover {
+  background-color: #ebd9d9;
+}
+main .wrapper .articleEditing-panel form .article-op #continue {
+  background-color: skyblue;
+  color: #fff;
+  border: 1px solid #fff;
+}
+main .wrapper .articleEditing-panel form .article-op #continue:hover {
+  background-color: #79bcd6;
+}
+main .wrapper .articleEditing-panel form .mask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+main .wrapper .articleEditing-panel form .mask .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+}
+main .wrapper .articleEditing-panel form .mask .container .t {
+  margin-top: 20px;
+}
+main .wrapper .articleEditing-panel form .mask .container .b {
+  margin-top: 20px;
+}
+main .wrapper .articleEditing-panel form .mask .container .b #cancel {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #000;
+  color: #000000;
+  font-weight: 700;
+  font-size: 20px;
+}
+main .wrapper .articleEditing-panel form .mask .container .b #cancel:hover {
+  background-color: #f0f1f1;
+}
+main .wrapper .articleEditing-panel form .mask .container .b #submit {
+  padding: 10px 20px;
+  background-color: skyblue;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+main .wrapper .articleEditing-panel form .mask .container .b #submit:hover {
+  background-color: #6fb9d6;
+}
